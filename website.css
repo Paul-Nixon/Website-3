@@ -1,0 +1,37 @@
+/* General Styles START */
+*, *::before, *::after
+{
+    box-sizing: border-box;
+}
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    font-size: 100%;
+    height: 100%;
+}
+
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.3;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header
+{
+
+}
+
+footer
+{
+    margin-top: auto;
+}
+/* General Styles END */
