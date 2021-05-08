@@ -25,13 +25,112 @@ body
     flex-direction: column;
 }
 
-header
+a
 {
-
+    text-decoration: none;
 }
 
+.content-section
+{
+    margin: 1em;
+}
+
+.container
+{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.btn
+{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.67em;
+    font-weight: bold;
+    outline: none;
+}
+/* General Styles END */
+
+
+/* Header Styles START */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.header-title-and-bars-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-title
+{
+    font-size: 1.6rem; /* Equivalent to 25.6px */
+    color: #D80000;
+    margin: 0;
+}
+
+.fa-bars
+{
+    cursor: pointer;
+    display: none;
+}
+
+.fa-bars, .header-links a, .btn-header
+{
+    color: whitesmoke;
+}
+
+.header-links a
+{
+    display: inline-block;
+    padding: 0.5em;
+    transition: color 350ms ease-in-out;
+}
+
+.header-links a:not(:last-child)
+{
+    margin-right: 0.5rem;
+}
+
+.header-links a:hover
+{
+    color: yellow;
+}
+
+.btn-header
+{
+    border-radius: 9999px; /* To make it pill-shaped */
+    border: 1px solid whitesmoke;
+    font-size: 1.25rem;
+    background-color: black;
+}
+
+.btn-header:hover
+{
+    background-color: ;
+}
+/* Header Styles END */
+
+
+/* index.html Styles START */
+
+/* index.html Styles END */
+
+
+/* Footer Styles START */
 footer
 {
     margin-top: auto;
 }
-/* General Styles END */
+/* Footer Styles END */
