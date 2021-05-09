@@ -98,6 +98,11 @@ header
     transition: color 350ms ease-in-out;
 }
 
+.header-links a:last-child
+{
+    display: none;
+}
+
 .header-links a:not(:last-child)
 {
     margin-right: 0.5rem;
@@ -111,21 +116,16 @@ header
 .btn-header
 {
     border-radius: 9999px; /* To make it pill-shaped */
-    border: 1px solid whitesmoke;
+    border: 2px solid whitesmoke;
     font-size: 1.25rem;
     background-color: black;
 }
 
 .btn-header:hover
 {
-    background-color: ;
+    background-color: #909090;
 }
 /* Header Styles END */
-
-
-/* index.html Styles START */
-
-/* index.html Styles END */
 
 
 /* Footer Styles START */
@@ -134,3 +134,157 @@ footer
     margin-top: auto;
 }
 /* Footer Styles END */
+
+
+/* index.html Styles START */
+.intro-container, .cta-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-container
+{
+    height: 100vh;
+}
+
+.cta-wrapper, .hero-wrapper
+{
+    width: 50%;
+    height: 100%;
+}
+
+.cta-wrapper
+{
+    flex-direction: column;
+    background-color: #D80000;
+}
+
+.intro-title
+{
+    text-align: center;
+    font-size: ;
+    line-height: ;
+    color: ;
+}
+
+.btn-cta-services-link, .btn-cta-join-link
+{
+    border-radius: ;
+    transition: ;
+    font-size: ;
+}
+
+.btn-cta-services-link
+{
+
+}
+
+.btn-cta-services-link:hover
+{
+
+}
+
+.btn-cta-join-link
+{
+
+}
+
+.btn-cta-join-link:hover
+{
+
+}
+
+.hero-wrapper
+{
+
+}
+
+.hero-img
+{
+
+}
+/* index.html Styles END */
+
+
+/* Media Queries Styles START */
+@media (max-width: 36.25rem) /* Equivalent to 580px */
+{
+    /* Header Styles START */
+    header
+    {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .header-title-and-bars-wrapper
+    {
+        width: 100%;
+        padding: 0 0.5em;
+    }
+
+    .fa-bars
+    {
+        display: block;
+    }
+
+    .fa-bars:hover
+    {
+        color: #909090;
+    }
+
+    .header-links
+    {
+        display: none;
+        border-top: 3px solid #909090;
+        padding-top: 0.5em;
+        width: 100%;
+    }
+
+    .header-links a
+    {
+        padding: 0.5em 0;
+    }
+
+    .header-links a:last-child
+    {
+        display: inline-block;
+    }
+
+    .btn-header
+    {
+        display: none;
+    }
+
+    .active-fa-bars
+    {
+        color: #909090;
+    }
+
+    .active-header-menu
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-links a
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-links a:hover
+    {
+        background-color: #909090;
+    }
+
+    .header-links a:not(:last-child), .header-title-and-bars-wrapper
+    {
+        margin-bottom: 0.5rem;
+    }
+    /* Header Styles END */
+}
+/* Media Queries Styles END */
