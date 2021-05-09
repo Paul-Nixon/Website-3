@@ -132,6 +132,7 @@ header
 footer
 {
     margin-top: auto;
+    background-color: #D2B48C; /* Tan */
 }
 /* Footer Styles END */
 
@@ -152,63 +153,103 @@ footer
 .cta-wrapper, .hero-wrapper
 {
     width: 50%;
-    height: 100%;
+    height: 80%;
 }
 
 .cta-wrapper
 {
     flex-direction: column;
     background-color: #D80000;
+    font-size: 1rem;
+    padding: 0 1.5em;
 }
 
 .intro-title
 {
     text-align: center;
-    font-size: ;
-    line-height: ;
-    color: ;
+    line-height: 1.7;
+    color: #98ff98; /* Mint green */
+}
+
+.btn-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-cta-services-link, .btn-cta-join-link
 {
-    border-radius: ;
-    transition: ;
-    font-size: ;
+    border-radius: 0.625rem; /* Equivalent to 10px */
+    transition: background-color 300ms ease-in-out;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .btn-cta-services-link
 {
-
+    background-color: white;
+    border: 3px solid black;
+    margin-right: 0.5rem;
 }
 
 .btn-cta-services-link:hover
 {
-
+    background-color: lightgrey;
 }
 
 .btn-cta-join-link
 {
-
+    background-color: black;
+    color: white;
+    border: 3px solid white;
 }
 
 .btn-cta-join-link:hover
 {
-
-}
-
-.hero-wrapper
-{
-
+    background-color: #36454f; /* Charcoal */
 }
 
 .hero-img
 {
-
+    background-image: url(Images/img-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
 }
 /* index.html Styles END */
 
 
 /* Media Queries Styles START */
+@media (max-width: 37.5rem) /* Equivalent to 600px */
+{
+    /* index.html Styles START */
+    .intro-title
+    {
+        font-size: 1.25rem;
+    }
+
+    .btn-wrapper
+    {
+        flex-direction: column;
+    }
+
+    .btn-cta-services-link, .btn-cta-join-link
+    {
+        font-size: 0.8125rem;
+    }
+
+    .btn-cta-services-link
+    {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    /* index.html Styles END */
+}
+
+
 @media (max-width: 36.25rem) /* Equivalent to 580px */
 {
     /* Header Styles START */
