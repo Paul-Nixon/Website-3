@@ -69,7 +69,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #333;
     font-size: 1.2rem;
     padding: 0.5rem;
 }
@@ -266,8 +266,6 @@ footer, .footer-social-links
 /* about.html Styles START */
 .about-container
 {
-    margin: 0 auto;
-    padding: 0 1.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -291,7 +289,7 @@ footer, .footer-social-links
 .img-about
 {
     height: 100%;
-    background-image: url();
+    background-image: url(Images/img-about.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -299,19 +297,34 @@ footer, .footer-social-links
 
 .about-content-wrapper
 {
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.about-content-wrapper .section-title
+{
+    margin-bottom: 0.5rem;
 }
 
 .about-pgs-wrapper
 {
-
+    padding: 0 1.5em;
 }
 
 .about-pg
 {
-
+    text-align: center;
+    font-size: large;
+    line-height: 1.4;
 }
 /* about.html Styles END */
+
+
+/* services.html Styles START */
+.services-container
+{
+    
+}
+/* services.html Styles END */
 
 
 /* Media Queries Styles START */
@@ -435,5 +448,15 @@ footer, .footer-social-links
         margin-bottom: 1rem;
     }
     /* Footer Styles END */
+}
+
+@media (max-width: 32.5rem) /* Equivalent to 520px */
+{
+    /* about.html Styles START */
+    .about-pgs-wrapper
+    {
+        overflow: scroll;
+    }
+    /* about.html Styles END */
 }
 /* Media Queries Styles END */
