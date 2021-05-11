@@ -52,6 +52,14 @@ a
     font-weight: bold;
     outline: none;
 }
+
+.section-title
+{
+    font-weight: normal;
+    text-align: center;
+    font-size: 2.5em;
+    color: #D80000;
+}
 /* General Styles END */
 
 
@@ -133,6 +141,39 @@ footer
 {
     margin-top: auto;
     background-color: #D2B48C; /* Tan */
+    font-size: 1rem;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.copyright
+{
+    font-weight: bold;
+}
+
+.fa-twitter, .fa-facebook, .fa-instagram
+{
+    font-size: 1.875rem;
+    text-align: center;
+    background: whitesmoke;
+    border-radius: 50%;
+    padding: 0.25em;
+}
+
+footer, .footer-social-links
+{
+    display: flex;
+    align-items: center;
+}
+
+.footer-social-links
+{
+    justify-content: center;
+}
+
+.footer-social-links a:not(:last-child)
+{
+    margin-right: 0.5rem;
 }
 /* Footer Styles END */
 
@@ -220,6 +261,57 @@ footer
     height: 100%;
 }
 /* index.html Styles END */
+
+
+/* about.html Styles START */
+.about-container
+{
+    margin: 0 auto;
+    padding: 0 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.img-about-wrapper, .about-content-wrapper, .img-about
+{
+    width: 100%;
+}
+
+.img-about-wrapper, .about-content-wrapper
+{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-about
+{
+    height: 100%;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.about-content-wrapper
+{
+    justify-content: space-between;
+}
+
+.about-pgs-wrapper
+{
+
+}
+
+.about-pg
+{
+
+}
+/* about.html Styles END */
 
 
 /* Media Queries Styles START */
@@ -327,5 +419,21 @@ footer
         margin-bottom: 0.5rem;
     }
     /* Header Styles END */
+}
+
+
+@media (max-width: 35rem) /* Equivalent to 560px */
+{
+    /* Footer Styles START */
+    footer
+    {
+        flex-direction: column;
+    }
+
+    .copyright
+    {
+        margin-bottom: 1rem;
+    }
+    /* Footer Styles END */
 }
 /* Media Queries Styles END */
