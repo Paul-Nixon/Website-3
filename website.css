@@ -149,6 +149,7 @@ footer
 .copyright
 {
     font-weight: bold;
+    text-align: center;
 }
 
 .fa-twitter, .fa-facebook, .fa-instagram
@@ -314,7 +315,7 @@ footer, .footer-social-links
 {
     text-align: center;
     font-size: large;
-    line-height: 1.4;
+    line-height: 1.7;
 }
 /* about.html Styles END */
 
@@ -349,6 +350,8 @@ footer, .footer-social-links
 .service-content-wrapper
 {
     background-color: black;
+    padding: 0 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .service-content-wrapper .section-title
@@ -361,6 +364,8 @@ footer, .footer-social-links
 {
     text-align: center;
     color: whitesmoke;
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 
 .img-service-wrapper
@@ -388,6 +393,14 @@ footer, .footer-social-links
     background-image: url(Images/img-trainer.jpg);
 }
 /* services.html Styles END */
+
+
+/* join.html Styles START */
+.join-container
+{
+    
+}
+/* join.html Styles END */
 
 
 /* Media Queries Styles START */
@@ -521,5 +534,22 @@ footer, .footer-social-links
         overflow: scroll;
     }
     /* about.html Styles END */
+}
+
+@media (max-width: 30.9375rem) /* Equivalent to 495px */
+{
+    /* services.html Styles START */
+    .service-content-wrapper .section-title
+    {
+        margin-bottom: 0.5rem;
+        font-size: xx-large;
+    }
+
+    .content-text
+    {
+        font-size: smaller;
+        padding-bottom: 1em;
+    }
+    /* services.html Styles END */
 }
 /* Media Queries Styles END */
