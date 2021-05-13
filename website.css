@@ -322,7 +322,70 @@ footer, .footer-social-links
 /* services.html Styles START */
 .services-container
 {
-    
+    flex-direction: column;
+    height: 100vh;
+}
+
+.services-container, .service-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.service-container
+{
+    flex-grow: 1;
+}
+
+.service-content-wrapper, .img-service-wrapper
+{
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+.service-content-wrapper
+{
+    background-color: black;
+}
+
+.service-content-wrapper .section-title
+{
+    color: #F80000;
+    font-weight: 550;
+}
+
+.content-text
+{
+    text-align: center;
+    color: whitesmoke;
+}
+
+.img-service-wrapper
+{
+    display: flex;
+    justify-content: center;
+}
+
+.img-service
+{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.img-karate
+{
+    background-image: url(Images/img-karate.jpg);
+}
+
+.img-trainer
+{
+    background-image: url(Images/img-trainer.jpg);
 }
 /* services.html Styles END */
 
