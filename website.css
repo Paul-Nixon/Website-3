@@ -398,7 +398,82 @@ footer, .footer-social-links
 /* join.html Styles START */
 .join-container
 {
-    
+    height: 100vh;
+}
+
+.form-wrapper
+{
+    background-color: #2f4f4f;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 0.625rem;
+}
+
+.join-container, .form-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-form
+{
+    justify-content: space-between;
+}
+
+.input-group
+{
+    justify-content: center;
+    margin-bottom: ;
+}
+
+.join-form, .input-group
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-form-input
+{
+    background-color: ;
+    width: ;
+    border-bottom: ;
+    font-size: ;
+    padding: ;
+}
+
+.join-form-input:not(:last-child)
+{
+    margin-bottom: ;
+}
+
+.form-btn-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-form
+{
+    border-radius: ;
+}
+
+.btn-reset, .btn-submit
+{
+
+}
+
+.btn-reset
+{
+
+}
+
+.btn-submit
+{
+
 }
 /* join.html Styles END */
 
