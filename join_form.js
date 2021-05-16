@@ -69,6 +69,7 @@ function renderErrorMessage(switchValue)
                     </p>
                 </div>
             </div>`;
+            modal.style.display = "block";
             break;
 
         case 2:
@@ -84,6 +85,7 @@ function renderErrorMessage(switchValue)
                     </p>
                 </div>
             </div>`;
+            modal.style.display = "block";
             break;
 
         case 3:
@@ -99,6 +101,7 @@ function renderErrorMessage(switchValue)
                     </p>
                 </div>
             </div>`;
+            modal.style.display = "block";
             break;
 
         case 4:
@@ -114,6 +117,7 @@ function renderErrorMessage(switchValue)
                     </p>
                 </div>
             </div>`;
+            modal.style.display = "block";
             break;
 
         case 5:
@@ -129,6 +133,7 @@ function renderErrorMessage(switchValue)
                     </p>
                 </div>
             </div>`;
+            modal.style.display = "block";
             break;
     }
 }
