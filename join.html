@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="website.css">
     <script src="header_menu.js" defer></script>
+    <script src="join_form.js" defer></script>
 </head>
 <body>
     <!-- Header Section-->
@@ -36,26 +37,44 @@
             <div class="form-wrapper">
                 <h2 class="section-title">Join Us</h2>
 
-                <form action="join.html" class="join-form">
+                <div class="join-form">
                     <div class="input-group">
-                        <input id="join-form-first-name" type="text" class="join-form-input"
-                        placeholder="First Name" required>
-                        <input id="join-form-last-name" type="text" class="join-form-input"
-                        placeholder="Last Name" required>
-                        <input id="join-form-email" type="email" class="join-form-input"
-                        placeholder="Email" required>
-                        <input id="join-form-password" type="password" class="join-form-input"
-                        placeholder="Password" required>
+                        <input type="text" class="join-form-input join-form-first-name"
+                        placeholder="First Name">
+                        <input type="text" class="join-form-input join-form-last-name"
+                        placeholder="Last Name">
+                        <input type="email" class="join-form-input join-form-email"
+                        placeholder="Email">
+                        <input type="password" class="join-form-input join-form-password"
+                        placeholder="Password">
+                        <input type="password" class="join-form-input join-form-confirm-password"
+                        placeholder="Confirm Password">
                     </div>
 
                     <div class="form-btn-wrapper">
-                        <button type="reset" class="btn-form btn-reset">Reset</button>
-                        <button type="submit" class="btn-form btn-submit">Submit</button>
+                        <button type="button" class="btn btn-reset">Reset</button>
+                        <button type="button" class="btn btn-submit">Submit</button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal"></div>
+    <!-- 
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2></h2>
+            </div>
+            <div class="modal-body">
+                <p>
+                    
+                </p>
+            </div>
+        </div>
+    -->
 
     <!-- Footer Section-->
     <footer>
