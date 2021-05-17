@@ -588,6 +588,53 @@ footer, .footer-social-links
 }
 /* join.html Styles END */
 
+/* contact.html Styles START */
+.contact-form
+{
+
+}
+
+.contact-img-wrapper
+{
+
+}
+
+.img-contact
+{
+
+}
+
+.contact-form-wrapper
+{
+
+}
+
+.contact-form-wrapper .section-title
+{
+
+}
+
+address
+{
+
+}
+
+.contact-form
+{
+
+}
+
+.btn-send
+{
+
+}
+
+.btn-send:hover
+{
+    
+}
+/* contact.html Styles END */
+
 
 /* Media Queries Styles START */
 @media (max-width: 37.5rem) /* Equivalent to 600px */
