@@ -1,5 +1,5 @@
 # Description
-This project is the 3rs website-project I've created, built by implementing HTML5, CSS3, & JavaScript. (First website: https://github.com/Paul-Nixon/Website-1#readme. Second website: https://github.com/Paul-Nixon/Website-2#readme)
+This project is the 3rd website-project I've created, built by implementing HTML5, CSS3, & JavaScript. (First website: https://github.com/Paul-Nixon/Website-1#readme. Second website: https://github.com/Paul-Nixon/Website-2#readme)
 
 This website is definitely better than the previous two by far. It is repetitive in terms of the two forms and flex layout, but I think it still looks great overall. I also tried my hardest to make it responsive for mobile devices, so I hope whoever views this appreciates my efforts ;).<br></br>
 
