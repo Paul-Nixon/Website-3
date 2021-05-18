@@ -8,28 +8,13 @@ else
 }
 
 /*
-    Function ready() adds event listeners to the form's Reset and Submit buttons.
+    Function ready() adds an event listener to the Send button which calls validateInput() when clicked.
     Precondition: The webpage's fully loaded.
-    Postcondition: The Reset and Submit buttons have respective event listeners.
+    Postcondition: The Send button has an event listener.
 */
 function ready()
 {
-    document.querySelector(".btn-reset").addEventListener("click", clearInputs);
-    document.querySelector(".btn-submit").addEventListener("click", validateInputs);
-}
-
-/*
-    Function clearInputs() clears all the text fields.
-    Precondition: The webpage's fully loaded.
-    Postcondition: All the text fields have no text in them.
-*/
-function clearInputs()
-{
-    document.querySelector(".join-form-first-name").value = "";
-    document.querySelector(".join-form-last-name").value = "";
-    document.querySelector(".join-form-email").value = "";
-    document.querySelector(".join-form-password").value = "";
-    document.querySelector(".join-form-confirm-password").value = "";
+    document.querySelector(".btn-send").addEventListener("click", validateInputs);
 }
 
 /*
@@ -43,40 +28,26 @@ function clearInputs()
 function validateInputs()
 {
     // Initialize variables w/ the form's inputs.
-    let firstNameInput = document.querySelector(".join-form-first-name");
-    let lastNameInput = document.querySelector(".join-form-last-name");
-    let emailInput = document.querySelector(".join-form-email");
-    let passwordInput = document.querySelector(".join-form-password");
-    let confirmPasswordInput = document.querySelector(".join-form-confirm-password");
+    let nameInput = document.querySelector(".contact-form-name");
+    let emailInput = document.querySelector(".contact-form-email");
+    let textarea = document.querySelector(".contact-form-textarea");
 
     // Validate all the inputs.
-    if (firstNameInput.value == "")
+    if (nameInput.value == "")
     {
         renderErrorMessage(1);
     }
-    else if (lastNameInput.value == "")
+    else if (emailInput.value == "")
     {
         renderErrorMessage(2);
     }
-    else if (emailInput.value == "")
+    else if (!emailInput.value.includes("@") || !emailInput.value.includes(".com"))
     {
         renderErrorMessage(3);
     }
-    else if (!emailInput.value.includes("@") || !emailInput.value.includes(".com"))
+    else if (textarea.value == "")
     {
         renderErrorMessage(4);
-    }
-    else if (passwordInput.value == "")
-    {
-        renderErrorMessage(5);
-    }
-    else if (confirmPasswordInput.value == "")
-    {
-        renderErrorMessage(6);
-    }
-    else if (!(confirmPasswordInput.value == passwordInput.value))
-    {
-        renderErrorMessage(7);
     }
     else
     {
@@ -86,7 +57,7 @@ function validateInputs()
 
 /*
     Function renderErrorMessage(switchValue) renders a modal displaying an error message to the user.
-    Precondition: The user clicked the Submit button and an input was incorrectly filled.
+    Precondition: The user clicked the Send button and an input was incorrectly filled.
     Postcondition: A modal displaying an error message is rendered.
 */
 function renderErrorMessage(switchValue)
@@ -104,7 +75,7 @@ function renderErrorMessage(switchValue)
                 </div>
                 <div class="modal-body">
                     <p>
-                        First name field cannot be empty.
+                        Name field cannot be empty.
                     </p>
                 </div>
             </div>`;
@@ -129,7 +100,7 @@ function renderErrorMessage(switchValue)
                 </div>
                 <div class="modal-body">
                     <p>
-                        Last name field cannot be empty.
+                        Email field cannot be empty.
                     </p>
                 </div>
             </div>`;
@@ -154,31 +125,6 @@ function renderErrorMessage(switchValue)
                 </div>
                 <div class="modal-body">
                     <p>
-                        Email field cannot be empty.
-                    </p>
-                </div>
-            </div>`;
-            modal.style.display = "block";
-            document.querySelector(".close").addEventListener("click", () => {
-                modal.style.display = "none";
-            });
-            window.onclick = (event) => {
-                if (event.target == modal)
-                {
-                    modal.style.display = "none";
-                }
-            }
-            break;
-
-        case 4:
-            modal.innerHTML = `
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close">&times;</span>
-                    <h2>Input Error</h2>
-                </div>
-                <div class="modal-body">
-                    <p>
                         Email field either doesn't contain '@' or ".com".
                     </p>
                 </div>
@@ -194,8 +140,8 @@ function renderErrorMessage(switchValue)
                 }
             }
             break;
-
-        case 5:
+            
+        case 4:
             modal.innerHTML = `
             <div class="modal-content">
                 <div class="modal-header">
@@ -204,57 +150,7 @@ function renderErrorMessage(switchValue)
                 </div>
                 <div class="modal-body">
                     <p>
-                        Password field cannot be empty.
-                    </p>
-                </div>
-            </div>`;
-            modal.style.display = "block";
-            document.querySelector(".close").addEventListener("click", () => {
-                modal.style.display = "none";
-            });
-            window.onclick = (event) => {
-                if (event.target == modal)
-                {
-                    modal.style.display = "none";
-                }
-            }
-            break;
-
-        case 6:
-            modal.innerHTML = `
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close">&times;</span>
-                    <h2>Input Error</h2>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Submit Password field cannot be empty.
-                    </p>
-                </div>
-            </div>`;
-            modal.style.display = "block";
-            document.querySelector(".close").addEventListener("click", () => {
-                modal.style.display = "none";
-            });
-            window.onclick = (event) => {
-                if (event.target == modal)
-                {
-                    modal.style.display = "none";
-                }
-            }
-            break;
-
-        case 7:
-            modal.innerHTML = `
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close">&times;</span>
-                    <h2>Input Error</h2>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        The Password and Submit Password fields don't match.
+                        Textarea field cannot be empty.
                     </p>
                 </div>
             </div>`;
@@ -273,13 +169,19 @@ function renderErrorMessage(switchValue)
 }
 
 /*
-    Function renderConfirmationMessage() renders a modal confirming to the user that their account
-    has been created.
-    Precondition: The user clicked the Submit button and all the inputs are correctly filled.
+    Function renderConfirmationMessage() renders a modal confirming to the user that their contact info
+    has been sent and clears the inputs.
+    Precondition: The user clicked the Send button and all the inputs are correctly filled.
     Postcondition: A modal displaying a confirmation message is rendered.
 */
 function renderConfirmationMessage()
 {
+    // Initialize variables w/ the form's inputs.
+    let nameInput = document.querySelector(".contact-form-name");
+    let emailInput = document.querySelector(".contact-form-email");
+    let textarea = document.querySelector(".contact-form-textarea");
+
+    // Render a modal displaying a confirmation message.
     let modal = document.querySelector(".modal");
     modal.innerHTML = `
             <div class="modal-content">
@@ -289,13 +191,12 @@ function renderConfirmationMessage()
                 </div>
                 <div class="modal-body">
                     <p>
-                        Your account has been created!.
+                        Your message has been sent!.
                     </p>
                 </div>
             </div>`;
     modal.style.display = "block";
     document.querySelector(".close").addEventListener("click", () => {
-        clearInputs();
         modal.style.display = "none";
     });
     window.onclick = (event) => {
@@ -304,4 +205,9 @@ function renderConfirmationMessage()
             modal.style.display = "none";
         }
     }
+
+    // Clear all the inputs.
+    nameInput.value = "";
+    emailInput.value = "";
+    textarea.value = "";
 }

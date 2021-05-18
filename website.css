@@ -30,7 +30,7 @@ a
     text-decoration: none;
 }
 
-.content-section
+.content-section /* So a webpage's main content won't touch the header, footer, and sides of the screen */
 {
     margin: 1em;
 }
@@ -42,7 +42,7 @@ a
     padding: 0 1.5em;
 }
 
-.btn
+.btn /* For all the webpage's buttons */
 {
     display: inline-block;
     vertical-align: middle;
@@ -79,7 +79,7 @@ a
     background-color: rgba(0,0,0,0.4);
 }
 
-.modal-content
+.modal-content /* A modal's content in its center */
 {
     position: relative;
     background-color: #fefefe;
@@ -94,6 +94,7 @@ a
 
 }
 
+/* Animation for a modal to appear from the top of the screen */
 @-webkit-keyframes animatetop
 {
     from
@@ -124,7 +125,7 @@ a
     }
 }
 
-.close
+.close /* For a modal's close button */
 {
     color: white;
     float: right;
@@ -160,38 +161,44 @@ header
     background-color: #333;
     font-size: 1.2rem;
     padding: 0.5rem;
+    position: relative;
 }
 
-.header-title-and-bars-wrapper
+.header-title-and-bars-wrapper /* Contains the title and hamburger bars */
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.company-title
+.company-title /* The company's title */
 {
     font-size: 1.6rem; /* Equivalent to 25.6px */
     color: #D80000;
     margin: 0;
 }
 
-.fa-bars
+.fa-bars /* Hamburger menu */
 {
     cursor: pointer;
     display: none;
 }
 
-.fa-bars, .header-links a, .btn-header
+.fa-bars, .header-links a, .btn-header /* Shared attribute between the hamburger menu, header links, and the header btn */
 {
     color: whitesmoke;
 }
 
-.header-links a
+.header-links a /* The header's links */
 {
     display: inline-block;
     padding: 0.5em;
     transition: color 350ms ease-in-out;
+}
+
+.header-links .active-header-link
+{
+    color: yellow;
 }
 
 .header-links a:last-child
@@ -588,50 +595,105 @@ footer, .footer-social-links
 }
 /* join.html Styles END */
 
-/* contact.html Styles START */
-.contact-form
-{
 
+/* contact.html Styles START */
+.contact-container
+{
+    height: 100vh;
+    width: 100%;
+}
+
+.contact-container, .contact-img-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-img-wrapper, .contact-form-wrapper
+{
+    width: 50%;
+}
+
+.contact-img-wrapper, .contact-form-wrapper, .img-contact
+{
+    height: 100%;
 }
 
 .contact-img-wrapper
 {
-
+    flex-direction: column;
 }
 
 .img-contact
 {
-
+    width: 100%;
+    background-image: url(Images/img-contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .contact-form-wrapper
 {
+    background-color: black;
+}
 
+.contact-form-wrapper, .contact-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-form-wrapper .section-title
 {
-
+    margin-bottom: 1rem;
 }
 
 address
 {
-
+    color: white;
+    margin-bottom: 1.25rem;
 }
 
-.contact-form
+.contact-form-input, .contact-form-textarea
 {
+    margin-bottom: 1rem;
+}
 
+.contact-form-input, .contact-form-textarea, address, .btn-send
+{
+    font-size: 1.2rem;
+}
+
+.contact-form-input
+{
+    width: 25ch;
+    border: 0;
+    border-bottom: 2px solid white;
+    background-color: black;
+    padding-left: 0.25em;
+    outline: 0;
+    color: white;
+}
+
+.contact-form-textarea
+{
+    resize: vertical;
 }
 
 .btn-send
 {
-
+    border-radius: 9999px;
+    background-color: grey;
+    border: 2px solid orange;
 }
 
 .btn-send:hover
 {
-    
+    background-color: lightgrey;
 }
 /* contact.html Styles END */
 
@@ -749,6 +811,25 @@ address
         width: 90%;
     }
     /* join.html Styles END */
+
+
+    /* contact.html Styles START */
+    .contact-img-wrapper
+    {
+        display: none;
+    }
+
+    .contact-form-wrapper
+    {
+        width: 100%;
+    }
+    /* contact.html Styles END */
+
+    /* Modal Styles START */
+    .modal-header h2
+    {
+        font-size: 1.25rem;
+    }
 }
 
 

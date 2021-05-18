@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="website.css">
     <script src="header_menu.js" defer></script>
+    <script src="contact.js" defer></script>
 </head>
 <body>
     <!-- Header Section-->
@@ -20,8 +21,8 @@
         <div class="header-links">
             <a href="/">Home</a>
             <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="#">Services</a>
+            <a href="#" class="active-header-link">Contact</a>
+            <a href="services.html">Services</a>
             <a href="join.html">Join Us</a>
         </div>
 
@@ -31,24 +32,29 @@
     </header>
 
     <!-- Main Section-->
-    <section class="content-section">
+    <section>
         <div class="contact-container">
             <div class="contact-img-wrapper">
                 <div class="img-contact"></div>
             </div>
 
             <div class="contact-form-wrapper">
-                <h2 class="section-title">Join Us</h2>
+                <h2 class="section-title">Contact Us</h2>
 
                 <address>
                     fakeemail@gmail.com<br>
                     555-555-5555<br>
-                    Houston, TX 00000
+                    Houston, TX 00000<br>
                     USA
                 </address>
 
                 <div class="contact-form">
-
+                    <input type="text" class="contact-form-input contact-form-name"
+                    placeholder="Name">
+                    <input type="email" class="contact-form-input contact-form-email"
+                    placeholder="Email">
+                    <textarea class="contact-form-textarea" cols="20" rows="10"
+                    placeholder="Ask us anything"></textarea>
                 </div>
 
                 <button type="button" class="btn btn-send">Send</button>
